@@ -8,8 +8,8 @@ class CalendarsController < ApplicationController
 
   # 予定の保存
   def create
-    plan = Plan.create(plan_params)
-    render json:{plan: plan}
+    Plan.create(plan_params)
+    redirect_to action: :index
   end
 
   private
